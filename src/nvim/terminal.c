@@ -1195,7 +1195,7 @@ static void refresh_scrollback(Terminal *term, buf_T *buf)
     if (((int)buf->b_ml.ml_line_count - height) >= (int)term->sb_size) {
       // scrollback full, delete lines at the top
       ml_delete(1, false);
-      deleted_lines(1, 1);
+      //deleted_lines(1, 1);
     }
     fetch_row(term, -term->sb_pending, width);
     int buf_index = (int)buf->b_ml.ml_line_count - height;
